@@ -5,6 +5,15 @@ const config = [
   ...nextVitals,
   ...nextTs,
   { ignores: ['.next/', 'out/', 'node_modules/', 'next-env.d.ts'] },
+  {
+    // GitHub Actions scripts (actions/github-script loads CommonJS).
+    files: ['.github/scripts/**/*.cjs'],
+    languageOptions: {
+      sourceType: 'commonjs',
+      globals: { require: 'readonly', module: 'writable', process: 'readonly', setTimeout: 'readonly' },
+    },
+    rules: { '@typescript-eslint/no-require-imports': 'off' },
+  },
 ];
 
 export default config;
