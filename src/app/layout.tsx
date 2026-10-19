@@ -13,6 +13,9 @@ import { THEME_INIT_SCRIPT } from '@/lib/theme';
 import { WalletProvider } from '@/lib/wallet';
 import { config, isTestnet } from '@/lib/config';
 
+import { LocaleProvider } from '@/i18n/LocaleContext';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -60,6 +63,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               (#75). The setting is read once here so every page below sees
               the same behaviour. */}
           <SwrProvider>
+            {/* Language for translated text (#5); defaults to English and
+                remembers the visitor's choice. */}
+            <LocaleProvider>
             <TestnetNotice />
             <SiteHeader />
 
@@ -76,6 +82,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     ? 'Testnet deployment. No real funds, and no patient health information is stored on chain — vouchers reference a service category and an opaque beneficiary reference only.'
                     : 'No patient health information is stored on chain — vouchers reference a service category and an opaque beneficiary reference only.'}
                 </p>
+                {/* Language choice for translated text (#5). */}
+                <LanguageSwitcher />
                 <nav aria-label="Footer navigation" className="flex flex-wrap gap-4 font-medium text-[var(--color-ink)]">
                   <Link href="/how-it-works" className="hover:text-[var(--color-brand)]">
                     How it works
@@ -103,6 +111,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </nav>
               </div>
             </footer>
+            </LocaleProvider>
           </SwrProvider>
         </WalletProvider>
       </body>
