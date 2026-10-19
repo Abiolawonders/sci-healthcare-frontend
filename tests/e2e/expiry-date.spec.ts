@@ -46,9 +46,7 @@ test('a custom expiry date becomes the voucher expiry', async ({ page }) => {
   await expect(page.getByText(/refundable after the end of/)).toBeVisible();
 
   await page.getByRole('button', { name: 'Fund voucher' }).click();
-
   // Funding now goes through a review step (#22).
-
   await page.getByRole('button', { name: 'Confirm', exact: true }).click();
   await expect(page.getByText('Voucher funded.')).toBeVisible();
 
