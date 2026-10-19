@@ -3,7 +3,9 @@
 import Link from 'next/link';
 import { use, useEffect, useMemo, useState } from 'react';
 
-import { type Service } from '@/lib/api';
+import { notFound } from 'next/navigation';
+
+import { ApiError, type Service } from '@/lib/api';
 import {
   formatDate,
   formatUsdc,
@@ -62,7 +64,7 @@ export default function ClinicPage({
   const { address } = use(params);
   const { address: wallet, signTransaction, connect } = useWallet();
 
-  const { provider, error: loadError } = useProvider(address);
+  const { provider, error: loadError, rawError: loadRawError } = useProvider(address);
   const [selectedOverride, setSelectedOverride] = useState<Service | null>(null);
   const firstActive = provider?.services.find((s) => s.active !== false) ?? null;
   const selected = selectedOverride ?? firstActive;
@@ -242,6 +244,8 @@ export default function ClinicPage({
     }
   }
 
+  // An unknown clinic is a missing page, not an API failure.
+  if (loadRawError instanceof ApiError && loadRawError.status === 404) notFound();
   if (loadError) return <Alert>{loadError}</Alert>;
   if (!provider) {
     return <p className="text-sm text-[var(--color-ink-soft)]">Loading clinic…</p>;
