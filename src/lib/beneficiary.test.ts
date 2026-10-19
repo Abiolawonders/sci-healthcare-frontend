@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { parsePatientBackup } from './beneficiary';
+import { parsePatientBackup, serialisePatientBackup } from './beneficiary';
 
 describe('parsePatientBackup', () => {
   it('accepts a valid JSON backup object', async () => {
@@ -49,5 +49,18 @@ describe('parsePatientBackup', () => {
     await expect(
       parsePatientBackup(JSON.stringify({ identifier: 'patient-123', key: 'too-short' })),
     ).rejects.toThrow('at least 32 characters');
+  });
+});
+
+describe('serialisePatientBackup', () => {
+  it('round-trips through the importer with nickname, reference and key', async () => {
+    const original = { nickname: 'Mum', identifier: 'card-881', key: '0123456789abcdef0123456789abcdef' };
+    await expect(parsePatientBackup(serialisePatientBackup(original))).resolves.toEqual(original);
+  });
+
+  it('refuses to back up a key that is too short to restore', () => {
+    expect(() => serialisePatientBackup({ identifier: 'card-881', key: 'short' })).toThrow(
+      'at least 32 characters',
+    );
   });
 });
