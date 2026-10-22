@@ -72,3 +72,18 @@ test('renders empty state when there is no voucher activity', async ({ page }) =
     page.getByText('No voucher activity recorded yet.'),
   ).toBeVisible();
 });
+
+test('renders fees collected from the stats API', async ({ page }) => {
+  await useMockWallet(page, FUNDER);
+  await mockBackend(page, {
+    vouchers: [],
+    stats: { feesCollected: '1234567' },
+  });
+  await page.goto('/stats');
+
+  const card = page.getByTestId(stats-fees-collected);
+  await expect(card).toBeVisible();
+  await expect(card).toContainText('Fees collected');
+  // 1234567 micro-USDC formats to $1.234567.
+  await expect(card).toContainText('$1.23');
+});
