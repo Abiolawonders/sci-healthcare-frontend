@@ -257,7 +257,7 @@ export const api = {
     ),
 
   receipts: (beneficiaryRef: string, params?: { limit?: number; offset?: number }) =>
-    client.receipts({ beneficiaryRef: beneficiaryRef, }),
+    client.receipts({ beneficiaryRef: beneficiaryRef, ...params }),
 
   /**
    * Attester directory. Not part of the generated client yet, so it goes

@@ -12,8 +12,8 @@
     "docs": "Nyaraka"
   },
   "footer": {
-    "testnetDisclaimer": "Usambazaji wa Testnet. Hakuna pesa halisi, na hakuna taarifa za afya ya mgonjwa zilizáhifadhiwa kwenye mtandao — vocha zinarejelea kategoria ya huduma na rejeleo lisilo dahiri la mnufaika pekee.",
-    "mainnetDisclaimer": "Hakuna taarifa za afya ya mgonjwa zilizáhifadhiwa kwenye mtandao — vocha zinarejelea kategoria ya huduma na rejeleo lisilo dahiri la mnufaika pekee."
+    "testnetDisclaimer": "Usambazaji wa Testnet. Hakuna pesa halisi, na hakuna taarifa za afya ya mgonjwa zilizohifadhiwa kwenye mtandao — vocha zinarejelea kategoria ya huduma na rejeleo lisilo dahiri la mnufaika pekee.",
+    "mainnetDisclaimer": "Hakuna taarifa za afya ya mgonjwa zilizohifadhiwa kwenye mtandao — vocha zinarejelea kategoria ya huduma na rejeleo lisilo dahiri la mnufaika pekee."
   },
   "common": {
     "loading": "Inapakia…",
@@ -24,20 +24,20 @@
     "usdc": "USDC",
     "cancel": "Ghairi",
     "close": "Funga",
-    "submitted": "Imewasilishhwa.",
+    "submitted": "Imewasilishwa.",
     "viewTransaction": "Tazama muamala",
     "indexerCatchUp": "Orodha zitasasishwa mara tu kielezo kinapofikia."
   },
   "home": {
-    "verifiedClinics": "Kliniki zilizôthibitishiwa",
-    "noClinics": "Bado hakuna kliniki zilizðsajiliwa."
+    "verifiedClinics": "Kliniki zilizothibitishwa",
+    "noClinics": "Bado hakuna kliniki zilizosajiliwa."
   },
   "stats": {
     "title": "Takwimu za itifaki",
-    "feesCollected": "Ada zilizokusuanya",
-    "feesCollectedNote": "Ada za itifaki hutolewa kwenye huduma zilizolipiwa na zinafundia kielezo cha chanzo cha wazi, ukagiti na utendezaji wa maundo. Hakuna ada inadaiwa kwenye na vocha zilizôfadhiliwa isizotakazwa kulipwa.",
-    "countryActivity": "Atiari ya vocha kra nechi",
-    "countryActivityEmpty": "Bado hakuna atiari ya vocha iliyorekodiwa.",
+    "feesCollected": "Ada zilizokusanywa",
+    "feesCollectedNote": "Ada za itifaki hutolewa kwenye huduma zilizolipiwa na zinafadhili kielezo cha chanzo wazi, ukaguzi na utendaji wa mikataba. Hakuna ada inayodaiwa kwenye vocha zilizofadhiliwa ambazo hazitakiwi kulipwa.",
+    "countryActivity": "Shughuli ya vocha kwa nchi",
+    "countryActivityEmpty": "Bado hakuna shughuli ya vocha iliyorekodiwa.",
     "country": "Nchi",
     "funded": "{count} imefadhiliwa",
     "settled": "{count} imelipwa",
@@ -54,13 +54,13 @@
     "disputeOutcome": "Matokeo ya mgogoro",
     "careReceipt": "Stakabadhi ya huduma",
     "minted": "Iliundwa",
-    "patientReference": "Rejeleo la msgonjwa",
-    "patientReferenceNote": "Rejeleo la msgonjwa ni msimbo usio wazi. Haliwezi kugenzwa kuwa jina lau nambari ya rekodi.",
+    "patientReference": "Rejeleo la mgonjwa",
+    "patientReferenceNote": "Rejeleo la mgonjwa ni msimbo usio wazi. Haliwezi kugeuzwa kuwa jina au nambari ya rekodi.",
     "viewContract": "Tazama mkataba wa vocha",
     "copyLink": "Nakili kiungo",
     "linkCopied": "Kiungo kimenakiliwa!",
     "presentAtDesk": "Onyesha kwenye Dawati la Kliniki",
-    "presentNote": "Onyesha msimbo huu wa QR unapofika kliniki. Dawati linaweza kuuchangua mara moja ili kutafuta na kudai vocha yako.",
+    "presentNote": "Onyesha msimbo huu wa QR unapofika kliniki. Dawati linaweza kuuchanganua mara moja ili kutafuta na kudai vocha yako.",
     "scanToView": "Changanua kutazama #{id}",
     "printPass": "Chapisha pasi ya vocha",
     "patientPass": "Pasi ya Vocha ya Mgonjwa",
@@ -73,24 +73,24 @@
     "scanWithClinicScanner": "Changanua na kichanganuzi cha kliniki",
     "ledgerNote": "Vocha hii inawakilisha ahadi ya amana kwenye daftari ya Stellar. Haina rekodi zozote za binafsi za matibabu au utambulisho.",
     "reportProblem": "Ripoti tatizo",
-    "reportProblemIntro": "Ni mfadhili pekee anayeweza kufungua msgoogoro. Ikiwa weny i mgonjwa, jamaa, au mtu mwingine yeyote aliyegundua tatizo kwenye vocha hii, fungua ripoti. Inajazwa mapema na nambari ya umma ya vocha, hali, huduma na kliniki pekee — kamwe si rejeleo la mgonjwa.",
+    "reportProblemIntro": "Ni mfadhili pekee anayeweza kufungua mgogoro. Ikiwa wewe ni mgonjwa, jamaa, au mtu mwingine yeyote aliyegundua tatizo kwenye vocha hii, fungua ripoti. Inajazwa mapema na nambari ya umma ya vocha, hali, huduma na kliniki pekee — kamwe si rejeleo la mgonjwa.",
     "reportProblemAction": "Ripoti tatizo"
   },
   "clinic": {
     "title": "Dawati la kliniki",
     "checking": "Inakagua usajili…",
-    "scanVoucherQr": "Changanua QR Ya vocha",
+    "scanVoucherQr": "Changanua QR ya vocha",
     "registerTitle": "Sajili kliniki hii",
     "clinicName": "Jina la kliniki",
     "countryCode": "Msimbo wa nchi (NG)",
     "register": "Sajili",
     "services": "Huduma",
-    "noServices": "Bado hakuna huduma zilizðorodheshwa. Wafadhili wanaweza kulipia tu huduma unzaorodhesha.",
+    "noServices": "Bado hakuna huduma zilizoorodheshwa. Wafadhili wanaweza kulipia tu huduma unazoorodhesha.",
     "code": "Msimbo {code}",
     "edit": "Hariri",
     "delist": "Ondoa kwenye orodha",
     "confirmDelist": "Thibitisha kuondoa",
-    "delistNote": "Kuondoa kwenye orodha kunazuia vocha mpya kwa huduma hii. Vocha zilizofadiliwa tayari huwesa kiasi kilichokubaliwa na kulipwa kawaida.",
+    "delistNote": "Kuondoa kwenye orodha kunazuia vocha mpya kwa huduma hii. Vocha zilizofadhiliwa tayari huwezesha kiasi kilichokubaliwa na kulipwa kawaida.",
     "updateService": "Sasisha huduma {code}",
     "listService": "Orodhesha huduma",
     "codePlaceholder": "Msimbo (101)",
@@ -151,7 +151,7 @@
     }
   },
   "scanner": {
-    "title": "Changanua QR Ya vocha ya mgonjwa",
+    "title": "Changanua QR ya vocha ya mgonjwa",
     "instructions": "Elekeza kamera kwenye msimbo wa QR wa vocha ya mgonjwa ili kuifungua kiotomatiki.",
     "requestingCamera": "Inaomba kamera…",
     "cameraUnavailable": "Kamera haipatikani",

@@ -35,7 +35,7 @@
   "stats": {
     "title": "Statistiques du protocole",
     "feesCollected": "Frais collectés",
-    "feesCollectedNote": "Les frais du protocole sont prélevés sur les soins réglés et financent l'indexeur open source, les audits et la maintenance courante. Aucun frai n'est prélevé sur les bons fondés qui ne sont pas régles.",
+    "feesCollectedNote": "Les frais du protocole sont prélevés sur les soins réglés et financent l'indexeur open source, les audits et la maintenance courante. Aucun frais n'est prélevé sur les bons financés qui ne sont pas réglés.",
     "countryActivity": "Activité des bons par pays",
     "countryActivityEmpty": "Aucune activité de bons enregistrée pour le moment.",
     "country": "Pays",
@@ -154,7 +154,7 @@
     "title": "Scanner le QR du bon patient",
     "instructions": "Pointez la caméra vers le code QR du bon du patient pour l'ouvrir automatiquement.",
     "requestingCamera": "Demande de caméra…",
-    "cameraUnavailable": "Caléra indisponible",
+    "cameraUnavailable": "Caméra indisponible",
     "manualPrompt": "Ou entrez le numéro de bon manuellement",
     "manualPlaceholder": "ex. 42 ou collez l'URL",
     "open": "Ouvrir"

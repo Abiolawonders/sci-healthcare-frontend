@@ -153,7 +153,7 @@
   "scanner": {
     "title": "Scan patient voucher QR",
     "instructions": "Point the camera at the patient's voucher QR code to open it automatically.",
-    "requestingCamera": "Requesting camera"…",
+    "requestingCamera": "Requesting camera…",
     "cameraUnavailable": "Camera unavailable",
     "manualPrompt": "Or enter voucher number manually",
     "manualPlaceholder": "e.g. 42 or paste URL",
